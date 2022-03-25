@@ -49,3 +49,5 @@ URxvt*internalBorder: 4
 
 URxvt*scrollBar: false
 URxvt*saveLines: 5000
+
+! Xft.dpi: 192
