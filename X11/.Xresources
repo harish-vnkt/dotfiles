@@ -40,8 +40,7 @@ URxvt.keysy.Shift-Control-C: eval:selection_to_clipboard
 URxvt.iso14755: false
 URxvt.iso14755_52: false
 
-URxvt*font:	xft:DejaVuSansMono:size=11:antialias=true
-URxvt*letterSpace: -1
+URxvt*font:	xft:Inconsolata Nerd Font Mono:style=Medium:size=14:pixelsize=16:antialias=True
 
 URxvt*borderLess:false
 URxvt*externalBorder: 0
