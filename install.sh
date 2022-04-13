@@ -46,3 +46,24 @@ ln -sf "$DOTFILES/dunst/dunstrc" "$XDG_CONFIG_HOME/dunst/dunstrc"
 #######
 rm -f "$HOME/.gitconfig"
 ln -sf "$DOTFILES/git/.gitconfig" "$HOME"
+
+############
+# vim-plug #
+############
+[ ! -f "$DOTFILES/nvim/autoload/plug.vim" ] \
+    && curl -fLo "$DOTFILES/nvim/autoload/plug.vim" --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+mkdir -p "$XDG_CONFIG_HOME/nvim/autoload"
+ln -sf "$DOTFILES/nvim/autoload/plug.vim" "$XDG_CONFIG_HOME/nvim/autoload/plug.vim"
+
+nvim --noplugin +PlugUpdate +qa
+
+########
+# tmux #
+########
+mkdir -p "$XDG_CONFIG_HOME/tmux"
+ln -sf "$DOTFILES/tmux/tmux.conf" "$XDG_CONFIG_HOME/tmux/tmux.conf"
+[ ! -d "$XDG_CONFIG_HOME/tmux/plugins/tpm" ] \
+    && git clone https://github.com/tmux-plugins/tpm \
+    "$XDG_CONFIG_HOME/tmux/plugins/tpm"
